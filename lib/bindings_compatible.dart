@@ -2,7 +2,7 @@
 // Use of this source code is governed by a MIT license that can be found
 // in the LICENSE file.
 
-// ignore_for_file: unnecessary_non_null_assertion
+// ignore_for_file: unnecessary_cast
 
 /// Provides compatible bindings instance across different Flutter version.
 library bindings_compatible;
@@ -15,40 +15,40 @@ import 'package:flutter/widgets.dart';
 
 /// Returns a [GestureBinding].
 GestureBinding useGestureBinding() {
-  return GestureBinding.instance!;
+  return GestureBinding.instance as GestureBinding;
 }
 
 /// Returns a [PaintingBinding].
 PaintingBinding usePaintingBinding() {
-  return PaintingBinding.instance!;
+  return PaintingBinding.instance as PaintingBinding;
 }
 
 /// Returns the [ImageCache] of a [PaintingBinding].
 ImageCache usePaintingBindingImageCache() {
-  return PaintingBinding.instance!.imageCache!;
+  return (PaintingBinding.instance as PaintingBinding).imageCache as ImageCache;
 }
 
 /// Returns a [RendererBinding].
 RendererBinding useRendererBinding() {
-  return RendererBinding.instance!;
+  return RendererBinding.instance as RendererBinding;
 }
 
 /// Returns a [SchedulerBinding].
 SchedulerBinding useSchedulerBinding() {
-  return SchedulerBinding.instance!;
+  return SchedulerBinding.instance as SchedulerBinding;
 }
 
 /// Returns a [SemanticsBinding].
 SemanticsBinding useSemanticsBinding() {
-  return SemanticsBinding.instance!;
+  return SemanticsBinding.instance as SemanticsBinding;
 }
 
 /// Returns a [ServicesBinding].
 ServicesBinding useServicesBinding() {
-  return ServicesBinding.instance!;
+  return ServicesBinding.instance as ServicesBinding;
 }
 
 /// Returns a [WidgetsBinding].
 WidgetsBinding useWidgetsBinding() {
-  return WidgetsBinding.instance!;
+  return WidgetsBinding.instance as WidgetsBinding;
 }
