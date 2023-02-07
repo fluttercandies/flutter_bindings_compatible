@@ -8,3 +8,4 @@
 library bindings_compatible;
 
 export 'src/bindings.dart';
+export 'src/of.dart';
